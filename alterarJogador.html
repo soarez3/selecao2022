@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ed.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <title>CBF-Dados alterado</title>
+</head>
+<body>
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fim</title>
+    <link rel="stylesheet" href="alt.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <img src="logo.png" alt="logo">
+
+<?php		
+$id=$_POST['id'];                
+$nome= $_POST['nome'];		
+$time=$_POST['time'];               
+$numero=$_POST['numero'];		
+$se=$_POST['se'];               
+$dt=$_POST['dt'];                
+		  
+$sql="update jogadores set id='$id',nome='$nome',time='$time',numero='$numero',funcao='$se',ds='$dt'
+where id=$id";
+$con=mysqli_connect("127.0.0.1","root","","copa");          		
+if (mysqli_connect_errno())	
+{  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}        
+mysqli_query($con, $sql);
+
+echo "<h1> O jogador $id foi alterado com sucesso! </h1>";                
+mysqli_close($con);		
+?> 
+<h3><a href="listaAtleta.html">VOLTAR</a></h3>
+</body>
+</html>

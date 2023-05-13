@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="de.css">
+	<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+	<title>CBF-Delete atleta</title>
+</head>
+<body>
+	<img src="logo.png" alt="log">
+	
+
+<?php
+$id=$_POST['id']; 
+$sql = "delete from jogadores where id='$id'";	 
+$con=mysqli_connect("127.0.0.1","root","","copa");    
+if (mysqli_connect_errno())
+{ 
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}                                             
+mysqli_query($con, $sql);
+echo "<h1> O jogador $id foi deletado com sucesso! </h1>";              
+mysqli_close($con);
+?> 
+
+<h3><a href="listaAtleta.html">VOLTAR</a></h3>
+</body>
+</html>

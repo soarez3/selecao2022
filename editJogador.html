@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <title>CBF-Alterar dados do atleta</title>
+</head>
+<body>
+    
+
+<?php	
+$id= $_POST['id'];	
+ $con=mysqli_connect("127.0.0.1","root","","copa"); 
+ if (mysqli_connect_errno())
+ {  echo "Failed to connect to MySQL: " . mysqli_connect_error();}	
+ $result = mysqli_query($con,"SELECT * FROM jogadores WHERE id='$id'");	
+?>
+<form action="alterarJogador.html" method="post">
+<?php while($row = mysqli_fetch_array($result)) { 
+?>	
+<h2>Alterar dados do jogador</h2>
+<input type="hidden" name="id" value="<?php echo $row['id']; ?>" />	
+<label>Nome: </label>
+    <input type="text" name="nome" value="<?php echo $row['nome']; ?>" />	
+ 
+<br>
+<label>Time: </label>
+    <input type="text" name="time" value="<?php echo $row['time']; ?>" />
+<br>
+<label>Numero: </label>
+
+<input type="text" name="numero" value="<?php echo $row['numero']; ?>" />	
+
+<br>
+<label> Função: </label>
+
+<select name="se">
+<option name="Goleiro" value="Goleiro<?php   ['Goleiro']; ?>">Goleiro</option>
+<option name="Zagueiro" value="Zagueiro<?php   ['Zagueiro']; ?>">Zagueiro</option>
+           
+                
+ <option name="lateral" value="lateral<?php   ['Lateral']; ?>">Lateral</option>
+ <option name="meia" value="Meia<?php   ['Meia']; ?>">Meia</option>
+ <option name="atacante" value="atacante<?php   ['atacante']; ?>">Atacante</option>
+
+</select>
+
+
+<br>
+<label>Data de Nascimento: </label>
+    <input type="date" name="dt" value="<?php echo $row['ds']; ?>"/>
+<br>
+
+<br>
+<button type="submit" name="enviar" value="ok">	Alterar	</button>
+</form>
+<?php } ?>
+
+</body>
+</html>

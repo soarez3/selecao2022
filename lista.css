@@ -1,0 +1,100 @@
+
+
+main{
+    background-image: linear-gradient(to right, #c0ad9b,#F2E5D5,#c0ac9f);
+       min-width: 720px;
+       max-width: 920px;
+       margin: auto;
+       padding: 10px;
+       box-shadow: 0px 0px 10px black;
+       margin-bottom: 25px;
+       border-bottom-left-radius: 10px;
+       border-bottom-right-radius: 10px;
+       border-radius: 15px;
+}
+
+body{
+    background-image: linear-gradient(to right, #118C3C, #D9B918, #031740);
+}
+
+table{
+  
+    border: 2px solid rgb(56, 124, 136);
+    background-image: linear-gradient(to right, #118C3C,#D9B918,#1448af);
+    
+    width: 720px;
+    padding: 15px;
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.281);
+   
+   
+    
+}
+tr th {
+    border: 2px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    text-align: center;
+   
+}
+
+tr td{
+    border: 1px solid rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+
+h1 {
+ font-family: cursive;
+ text-align: center;
+ color: rgb(49, 49, 49);
+ background-image: linear-gradient( #118c3cbb,#d9b918c5,#1448afcc);
+ box-shadow: 3px 3px 10px rgb(255, 255, 255);
+ }
+button{
+   
+    padding: 3px;
+    border-color: rgb(35, 132, 189);
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient( #4691c0, #2b88c2, #229eeb);
+    color: rgb(0, 0, 0);
+
+}
+button:hover{
+    background-color: rgb(0, 60, 139);
+    border-color: rgba(236, 236, 236, 0.267);
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+
+}
+
+
+h3 a{
+    width: 100px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(26, 25, 25);
+    background-image: linear-gradient(#172c4b, #11406b, #00395f);
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    font-family: cursive;
+    margin: auto;
+    display: block;
+    
+    }
+    h3 a:hover{
+        text-decoration: underline;
+        color: black;
+        background: rgb(12, 114, 182);
+       
+    
+    }
+   
+
+   
+
